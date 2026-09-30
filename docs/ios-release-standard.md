@@ -27,6 +27,8 @@ Before switching to `ready`, replace all placeholder values in `APP_IDENTITY.jso
 - `xcode.container`
 - `xcode.scheme`
 - listing URLs and locale text
+- listing EULA URL in every locale description
+- screenshot PNG paths, width, and height when screenshots will be uploaded
 
 Then run:
 
@@ -36,3 +38,12 @@ python3 scripts/materialize_release_contract.py --check
 ```
 
 The central reusable workflows will fail closed if the repository, bundle ID, App Store Connect app ID, credentials, or listing manifest disagree.
+
+## Listing and screenshot gates
+
+The organisation App Store workflow validates legal and screenshot fields before Fastlane can upload metadata.
+
+- Every locale needs `eula_url`, and the public description must include that exact URL.
+- `legal_urls_live` must be `pass` before metadata delivery.
+- Screenshot upload requires each PNG to exist and match the declared width and height.
+- Screenshot authenticity and localization booleans must be true before upload.
