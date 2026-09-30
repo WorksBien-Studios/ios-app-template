@@ -11,6 +11,10 @@ It wires a new app into the organisation-level release automation in `WorksBien-
 - A generated `docs/app-store-listing-manifest.json` used by the listing lane.
 - A fail-closed sync check so stale release metadata cannot silently ship.
 
+## Release operations
+
+Read `docs/worksbien-release-operations.md` before pushing TestFlight builds, listing metadata, screenshots/images, or review submissions from GitHub.
+
 ## New app setup
 
 1. Create a new repository from this template.
