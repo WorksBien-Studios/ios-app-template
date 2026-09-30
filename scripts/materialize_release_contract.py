@@ -13,6 +13,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 IDENTITY_PATH = ROOT / "APP_IDENTITY.json"
 APP_MAP_PATH = ROOT / ".github" / "testflight-app-map.json"
 LISTING_PATH = ROOT / "docs" / "app-store-listing-manifest.json"
+APPLE_STANDARD_EULA = "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
 
 
 def load_identity() -> dict[str, Any]:
@@ -97,6 +98,7 @@ def build_listing_manifest(identity: dict[str, Any]) -> dict[str, Any]:
                 "support_url": listing["support_url"],
                 "marketing_url": listing["marketing_url"],
                 "privacy_url": listing["privacy_url"],
+                "eula_url": locale.get("eula_url", APPLE_STANDARD_EULA),
                 "whats_new": locale.get("whats_new", ""),
             }
             for locale in listing["locales"]
