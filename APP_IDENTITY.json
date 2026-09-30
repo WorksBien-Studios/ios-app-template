@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "release_state": "draft",
+  "repository": "WorksBien-Studios/ios-app-template",
+  "app": {
+    "name": "App Name",
+    "bundle_id": "com.worksbienstudios.app",
+    "team_id": "49SQ3XQ68Q",
+    "asc_app_id": "APP_STORE_CONNECT_APP_ID",
+    "sku": "APP-SKU",
+    "primary_category": "Productivity",
+    "company_name": "WorksBien Studios Inc."
+  },
+  "credentials": {
+    "credential_alias": "worksbien-org-admin",
+    "asc_key_id": "63PRWU447P",
+    "asc_issuer_id": "9f49640c-f575-42b4-b0c7-8e3194aef419",
+    "private_key_secret_name": "ASC_PRIVATE_KEY"
+  },
+  "xcode": {
+    "container_type": "project",
+    "container": "ios/App.xcodeproj",
+    "scheme": "App",
+    "required_check_name": "iOS build and test",
+    "signing_style": "automatic",
+    "export_method": "app-store-connect",
+    "signing_certificate": "Apple Distribution"
+  },
+  "release": {
+    "marketing_version": "1.0",
+    "listing_platform": "IOS",
+    "beta_group_id": "APP_SPECIFIC_BETA_GROUP_ID"
+  },
+  "listing": {
+    "mode": "draft",
+    "version": "1.0",
+    "release_kind": "new",
+    "support_url": "https://worksbienstudios.com/apps/app/support/",
+    "marketing_url": "https://worksbienstudios.com/apps/app/",
+    "privacy_url": "https://worksbienstudios.com/apps/app/privacy/",
+    "locales": [
+      {
+        "locale": "en-US",
+        "claims_supported": false,
+        "name": "App Name",
+        "subtitle": "Clear search-focused subtitle",
+        "promotional_text": "",
+        "description": "",
+        "keywords": [],
+        "whats_new": ""
+      }
+    ],
+    "screenshots": [],
+    "review_notes": ""
+  }
+}
